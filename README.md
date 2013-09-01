@@ -1,13 +1,10 @@
-JSTP URI Scheme RFC
-===================
+JSTP/0.5 URI Scheme 1.0
+=======================
 
-Current version: 0.1
-
-This document describes a draft standard.
+> This document describes a draft standard.
 
 Rationale
 ---------
-
 
 In order to simplify the description of JSTP dispatches, it would be nice to have a JSTP uri scheme.
 
