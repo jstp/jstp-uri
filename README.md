@@ -13,17 +13,19 @@ JSTP is similar enough to HTTP to be described with similar structure in an uri,
 Samples
 -------
 
-Local PUT Dispatch to User resource: `PUT jstp:///User`
+Local PUT Dispatch to User resource: `PUT jstp:User`
 
-Remote (one host) POST Dispatch to Article: `POST jstp://db:8000:tcp/Article`
+Remote (one host) POST Dispatch to Article: `POST jstp:db:8000:tcp/Article`
 
-Binding to double remote DELETE of Library: `BIND DELETE jstp://hub:80:ws,building:80:ws/Library`
+Binding to double remote DELETE of Library: `BIND DELETE jstp:hub:80:ws,building:80:ws/Library`
 
-In many cases, the `jstp://`prefix is verbose and avoidable, such as application logs. A simplified form will be:
+In many cases, the `jstp:`prefix is verbose and avoidable, such as application logs. A simplified form will be:
 
 `POST db:8000:tcp/Article`
 
 Should any other type of data be listed in the URL? This looks ok, but maybe the Dispatch Body could be added using some kind of encoding, such as base64 or URL encoding, after a `?`.
+
+PUT from a certain referer: `PUT Book//library`
 
 Also: Resources should be URL encoded when using URLs. Mainly because of the `/` char that can legally be used within a Resource Item.
 
