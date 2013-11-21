@@ -1,7 +1,26 @@
-JSTP/0.5 URI Scheme 1.0
+JSTP URI: JSTP/0.6 URI 1.0
 =======================
 
-> This document describes a draft standard.
+This document specifies an independently created Uniform Resource Identifier standard aimed at the Internet community. 
+
+The JSTP URI version described here is major version `1` and minor version `0` for JSTP version `0.6`, referred to as `JSTP/0.6 Engine 0.1`.
+
+This document and the specified standard are released by the JSTP collaborators under the [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/deed).
+
+Introduction
+---------------
+
+The JSTP URI is a uniform and portable description for the JSTP Endpoints as described in the [JSTP Endpoint Header](//github.com/jstp/jstp-rfc/blob/master/version/0.6/syntax/endpoint.md).
+
+### Design goals
+
+- Standardize description of JSTP Endpoints 
+
+---
+
+**CONTINUE**
+
+---
 
 Rationale
 ---------
