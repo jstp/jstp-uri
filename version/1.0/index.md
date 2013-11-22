@@ -24,6 +24,7 @@ A crucial concern of the JSTP URI is to enable user agents to provide easy acces
 _add reference to the RFC_
 
 [JSTP URI Scheme](https://github.com/jstp/jstp-uri): An URI addressing specification for describing JSTP resources. Its ultimate aim is to describe JSTP with enough power to be used analogously as HTTP URLs are used by user agents for consuming HTTP resources.
+
 ---
 
 **CONTINUE**
