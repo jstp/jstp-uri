@@ -82,7 +82,7 @@ The Host Name is _required_.
 
 ### Port Number
 
-The Port Number is a positive integer representing the port number of the target destination. It is _optional_.
+The Port Number is a positive integer representing the port number of the target destination. It is _optional_. If not present, a virtual address is assumed.
 
 ### Transport Protocol Label
 
@@ -91,8 +91,10 @@ Since JSTP can be sent over several Transport Protocols, the desired Transport P
 All lower case a-z strings are valid but three protocol handlers are supported:
 
 - `ws` for WebSocket
-- `tcp` for a plain TCP Socket
-- `http` for polling over an HTTP connection.
+- `tcp` for a plain Transport Control Protocol socket.
+- `http` for polling over an Hypertext Transport Protocol connection.
+
+The Transport Protocol Label is optional. If the Transport Protocol Label is not present, it is assumed to be TCP in most environments, WebSocket in modern browsers and HTTP in HTTP-only environments.
 
 ---
 
