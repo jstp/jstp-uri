@@ -5,7 +5,7 @@ JSTP URI
 
 The JSTP URI is an URL format for describing JSTP Endpoints. 
 
-The current version of the recommendation is the [JSTP/0.6 URI 1.0 Draft].
+The current version of the recommendation is the [JSTP/0.6 URI 1.0 Draft](version/1.0/index.md).
 
 All versions
 ------------
