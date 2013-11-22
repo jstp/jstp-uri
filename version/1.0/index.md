@@ -25,62 +25,35 @@ A crucial concern of the JSTP URI is to enable user agents to provide easy acces
 
 [JSTP Engine Specification](https://github.com/jstp/jstp-engine): The JSON Transfer Protocol is the core standard in an specification suite along with the [JSTP Engine Specification](https://github.com/jstp/jstp-engine).
 
----
+### Requirements
 
-**CONTINUE**
+The key words "must", "must not", "required", "shall", "shall not", "should", "should not", "recommended", "may", and "optional" in this document are to be interpreted as described in [Key words for use in RFCs to Indicate Requirement Level _RFC 2119_](http://www.ietf.org/rfc/rfc2119.txt).
 
----
+An implementation is not compliant if it fails to satisfy one or more of the _must_ or _required_ level requirements for the protocols it implements. An implementation that satisfies all the _must_ or _required_ level and all the _should_ level requirements for its protocols is said to be "unconditionally compliant"; one that satisfies all the _must_ level requirements but not all the _should_ level requirements for its protocols is said to be "conditionally compliant."
 
-Rationale
----------
+### Roadmap
 
-In order to simplify the description of JSTP dispatches, it would be nice to have a JSTP uri scheme.
+You can find the [Roadmap](https://github.com/jstp/jstp-uri/issues/5) and the updated status of its implementation as an [issue in the issue tracker](https://github.com/jstp/jstp-uri/issues/5) for the specification repository.
 
-JSTP is similar enough to HTTP to be described with similar structure in an uri, the main exceptions being the multiple hosts header and the complex nature of the Dispatch Body.
-
-Samples
--------
-
-Local PUT Dispatch to User resource: `PUT jstp:User`
-
-Remote (one host) POST Dispatch to Article: `POST jstp:db:8000:tcp/Article`
-
-Binding to double remote DELETE of Library: `BIND DELETE jstp:hub:80:ws,building:80:ws/Library`
-
-In many cases, the `jstp:`prefix is verbose and avoidable, such as application logs. A simplified form will be:
-
-`POST db:8000:tcp/Article`
-
-Should any other type of data be listed in the URL? This looks ok, but maybe the Dispatch Body could be added using some kind of encoding, such as base64 or URL encoding, after a `?`.
-
-PUT from a certain referer: `PUT Book//library`
-
-Also: Resources should be URL encoded when using URLs. Mainly because of the `/` char that can legally be used within a Resource Item.
-
-From the JSTP RFC
+Table of Contents
 -----------------
 
-JSTP Dispatches are designed from the bottom up to be as compatible with HTTP as possible, so JSTP resources can be represented as URLs. 
+2. [Syntax](syntax.md)
 
-This sample Dispatch:
 
-```javascript
-{
-  "protocol":   ["JSTP", "0.4"],      // The protocol and version
-  "method":     "GET",                // The method. Headers are case-insensitive but is customary to user uppercase
-                                      // in this one after the HTTP convention
-  "resource":   ["foods", "pizza"],   // The selected resource which is to be retrieved (since the method is GET)
-  "timestamp":  1365647440759,        // The milliseconds since the 1970-01-01 00:00:00.000 (also known as the UNIX timestamp)
-  "token":      ["3434h5098asr34h3"], // [optional] An UUID called the Transaction ID, used to track back Answer Dispatches
-  "host":       ["pizza.com.ar"],     // [optional] The destination host to which the Dispatch is to be sent
-  "body":       {                     // [optional] A message body
-    "message": "Let the cheese melt!"       
-  }
-}
-```
+Acknowledgements
+----------------
 
-...may be represented as an URL like this:
+### Collaborators
 
-    jstp://pizza.com.ar/foods/pizza
+- [Fernando Vía Canel](https://github.com/xaviervia)
+- [Luciano Bertenasco](https://github.com/lbertenasco)
 
-This notation is useful to quickly build JSTP Dispatches from user input, as writing down the JSON by hand can be quite a burden.
+### Organizations
+
+- [SouthLogics](http://southlogics.com)
+
+License
+-------
+
+[Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/legalcode).
