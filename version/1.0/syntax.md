@@ -1,4 +1,4 @@
-[ [Back to Table of Contents](index.md) ]
+[Back to Table of Contents](index.md)
 
 ---
 
@@ -58,4 +58,4 @@ This notation is useful to quickly build JSTP Dispatches from user input, as wri
 
 ---
 
-[ [Back to Table of Contents](index.md) ]
+[Back to Table of Contents](index.md)
