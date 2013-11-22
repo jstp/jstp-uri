@@ -45,7 +45,7 @@ The URI Methods are optional. If left out, a `GET` Method is assumed.
 To Addresses
 ------------
 
-The URI To Addresses represent the To Header of the Dispatch. Each element in the To Header is separated by a `,` and after the last address is listed, two slashes must be added: `//`.
+The URI To Addresses represent the To Header of the Dispatch. Each element in the To Header is separated by a `,` and after the last address is listed, two slashes must be added: `//`. Each element in the To Addresses is called an Address.
 
 For example, the URI To Addresses of a Dispatch with a `["localhost:80:tcp", "monje"]` To Header will be `localhost:80:tcp,monje//`. 
 
@@ -63,12 +63,36 @@ The URI Resource is _required_.
 From Addresses
 --------------
 
-The URI From Addresses represent the From Header of the Dispatch. Each element in the From Header is separated by a `,` and before the first address is listed a semicolon must be added: `;`.
+The URI From Addresses represent the From Header of the Dispatch. Each element in the From Header is separated by a `,` and before the first address is listed a semicolon must be added: `;`. Like in the To Addresses, each element in the From Addresses is called an Address.
 
 For example, the URI From Addresses of a Dispatch with a `["2354s324d2134", "remote"]` From Header will be `;2354s324d2134,remote`.
 
 The URI From Address is _optional_. If left out, no From Header is assumed.
 
+Address
+-------
+
+An URI Address is the representation of an internet address and port number along with a transport communication protocol. Both the port number and transport protocol label are optional. Each part is separated from the others by a `:` colon.
+
+### Host Name
+
+The first element in the address is the host name. It can be any valid [domain name](http://www.ietf.org/rfc/rfc1035.txt) or [Internet Protocol](http://www.ietf.org/rfc/rfc791.txt) address. It also can be used to represent virtual resources within an application. 
+
+The Host Name is _required_.
+
+### Port Number
+
+The Port Number is a positive integer representing the port number of the target destination. It is _optional_.
+
+### Transport Protocol Label
+
+Since JSTP can be sent over several Transport Protocols, the desired Transport Protocol can be represented with a label in the Address.
+
+All lower case a-z strings are valid but three protocol handlers are supported:
+
+- `ws` for WebSocket
+- `tcp` for a plain TCP Socket
+- `http` for polling over an HTTP connection.
 
 ---
 
