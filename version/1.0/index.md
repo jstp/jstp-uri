@@ -21,9 +21,9 @@ A crucial concern of the JSTP URI is to enable user agents to provide easy acces
 
 ### Related specifications
 
-_add reference to the RFC_
+[JSON Transfer Protocol RFC](//github.com/jstp/jstp-rfc): The main specification in the suite, it describes a communication protocol based in [JSON](http://www.json.org/) that aims to provide an uniform description language for resource access across the entire application stack.
 
-[JSTP URI Scheme](https://github.com/jstp/jstp-uri): An URI addressing specification for describing JSTP resources. Its ultimate aim is to describe JSTP with enough power to be used analogously as HTTP URLs are used by user agents for consuming HTTP resources.
+[JSTP Engine Specification](https://github.com/jstp/jstp-engine): The JSON Transfer Protocol is the core standard in an specification suite along with the [JSTP Engine Specification](https://github.com/jstp/jstp-engine).
 
 ---
 
