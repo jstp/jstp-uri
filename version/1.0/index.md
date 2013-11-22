@@ -14,8 +14,16 @@ The JSTP URI is a uniform and portable description for the JSTP Endpoints as des
 
 ### Design goals
 
-- Standardize description of JSTP Endpoints 
+- Standardize description of JSTP Endpoints
+- Simplify human communication of JSTP Dispatch descriptions
 
+A crucial concern of the JSTP URI is to enable user agents to provide easy access to JSTP Resources, such as the HTTP URL has enabled the World Wide Web.
+
+### Related specifications
+
+_add reference to the RFC_
+
+[JSTP URI Scheme](https://github.com/jstp/jstp-uri): An URI addressing specification for describing JSTP resources. Its ultimate aim is to describe JSTP with enough power to be used analogously as HTTP URLs are used by user agents for consuming HTTP resources.
 ---
 
 **CONTINUE**
